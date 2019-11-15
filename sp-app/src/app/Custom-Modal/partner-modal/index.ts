@@ -1,1 +1,0 @@
-export * from './partner-modal.component';
