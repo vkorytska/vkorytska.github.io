@@ -1,0 +1,10 @@
+<div class="main-content_bg">
+    <div>
+        <button [class.active]="isInformation" (click)="getContent(1)">Information</button>
+        <button [class.active]="isCourses" (click)="getContent(2)">Courses</button>
+        <button [class.active]="isProjects" (click)="getContent(3)">Projects</button>
+    </div>
+</div>
+<information-section *ngIf="isInformation"></information-section>
+<courses *ngIf="isCourses"></courses>
+<project *ngIf="isProjects"></project>

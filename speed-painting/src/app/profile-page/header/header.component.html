@@ -1,0 +1,46 @@
+<div class="main-header-background">
+    <div class="space-between header pr40 pl40">
+      <a class="w25" [routerLink]="routerLinkValue">
+        <div class="logo">
+          <img class="logo-small" src="../../../assets/logo.png" alt="logotype">
+          <img class="logo-large" src="../../../assets/logotype.png" alt="logotype">
+        </div>
+      </a>
+      <div class="flex-align-center p0 menu-large">
+        <ul class="navigation topBotomBordersOut m0 p0">
+          <a [routerLink]="'/courses'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><li>Courses</li></a>
+          <a [routerLink]="'/projects'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>Projects</li></a>
+          <a [routerLink]="'/students'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><li>Students</li></a>
+          <a [routerLink]="'/partners'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>Partners</li></a>
+          <a [routerLink]="'/main'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>About school</li></a>
+          <a *ngIf='isActivated' [routerLink]="'/myProfile'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>My profile</li></a>
+        </ul>  
+      </div>
+      <div class="w25 flex-align-center flex-end nav-right">
+        <a class="search-form">
+            <input name="search" type="text" placeholder="Search..." autocomplete="off">
+            <input value="" type="submit">
+        </a>
+        <div *ngIf="isActivated" class="account" (click)="openModal('user-dialog')"></div>
+
+        <button *ngIf="!isActivated" class="log-in" (click)="showLogInModal()">Log in</button>
+
+        <div class="menu-small" (click)="openMenu = !openMenu">
+            <div class="burger">
+                <span id="burger-btn" [ngClass]="openMenu ? 'btn selected' : 'btn'"></span>
+            </div>
+            <div [hidden]="!openMenu || !hasClassName()" class="menu-mobile">
+                <ul class="nav-mobile bordersOut m0 p0">
+                    <a [routerLink]="'/courses'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><li>Courses</li></a>
+                    <a [routerLink]="'/projects'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>Projects</li></a>
+                    <a [routerLink]="'/students'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><li>Students</li></a>
+                    <a [routerLink]="'/partners'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>Partners</li></a>
+                    <a [routerLink]="'/main'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>About school</li></a>
+                    <a *ngIf='isActivated' [routerLink]="'/myProfile'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>My profile</li></a>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<user-dialog></user-dialog>

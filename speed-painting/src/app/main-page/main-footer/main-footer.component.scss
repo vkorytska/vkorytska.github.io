@@ -1,0 +1,126 @@
+$bg: #232128;
+$status: #7c7b84;
+$dark-bg: #383643;
+$grey: #747279;
+$light-grey: #b9b8bc;
+$input-color: #bbb5cc;
+$input-bg: #403e47;
+$border: #737179;
+
+.main-footer-background {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: $bg;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+        .main-footer_navigation {
+            display: flex;
+            flex-wrap: wrap;
+
+            nav {
+                padding-right: 50px;
+            }
+        }
+
+        .status {
+            display: inline-block;
+            padding: 0px 6px;
+            border-radius: 4px;
+            color: $status;
+            background: $dark-bg;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        span {
+            color: $grey;
+            line-height: 1.5;
+        }
+
+        span.bold {
+            color: $light-grey;
+        }
+
+        a {
+            color: $grey;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .fb-icon {
+            background: url("../../../assets/fb-icon.png") no-repeat center;
+        }
+
+        .tw-icon {
+            background: url("../../../assets/tw-icon.png") no-repeat center;
+        }
+
+        .in-icon {
+            background: url("../../../assets/in-icon.png") no-repeat center;
+        }
+
+        .inst-icon {
+            background: url("../../../assets/inst-icon.png") no-repeat center;
+        }
+
+        input {
+            width: 200px;
+            height: 35px;
+            padding: 10px;
+            background-color: $dark-bg;
+            border: 1px solid $grey;
+            color: $input-color;
+            outline: none;
+            font-size: 13px;
+
+            &::placeholder {
+                color: $grey;
+            }
+        }
+
+        input[type=submit] {
+            margin-left: 5px;
+            width: 120px;
+            height: 36px;
+            border-radius: 1px;
+            background-color: $input-bg;
+            border: none;
+            color: $light-grey;
+            font-weight: 900;
+            font-size: 12px;
+            font-family: "Lato";
+        }
+
+        .space-between {
+            width: 200px;
+            padding: 10px 0;
+        }
+    
+}
+
+.under-footer {
+    background: $bg;
+    color: $grey;
+
+    div {
+        border-top: 1px solid $border;
+        padding: 25px 0;
+    }
+}
+
+@media screen and (max-width: 703px) {
+    .main-footer-background {
+        nav {
+            width: 100%;
+
+            div.pb10 {
+                padding-top: 10px; 
+            }
+        }
+    }
+}

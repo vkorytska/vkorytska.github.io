@@ -1,0 +1,64 @@
+<div class="header-title pr40 pl40">
+    <div>
+        <h2>Students of Speed Painting school</h2>
+        <h6>All courses are created on the basis of academic programs, combine deep theoretical knowledge and practice.</h6>
+    </div>
+</div>
+
+<div class="filtration">
+    <div class="search-hero">
+        <div class="search">
+            <div class="styled-select">
+                <select class="custom-select" (change)="changeStatus($event)">
+                    <option>Artist status</option>
+                    <option *ngFor="let state of states; let i=index" [ngValue]="state">{{state}}</option>
+                </select>
+            </div>
+            <div class="styled-select">
+                <select class="custom-select" (change)="changeDirection($event)">
+                    <option>Artistic direction</option>
+                    <option *ngFor="let direction of directions; let i=index" [ngValue]="direction">{{direction}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+            placeholder="Enter Artist name...">
+    </div>
+</div>
+
+<div class="students container-fluid flex-align-center pr40 pl40">
+    <div class="students-container">
+        <div *ngFor="let project of projects| filterData: {author: searchText, state: searchStatus, direction:searchDirection}"
+            class="flex-align-center w-100 container_bg wrap">
+            <!--Content-->
+            <div class="student-section">
+                <div class="student_photo">
+                    <!--photo-->
+                    <img [src]="project.photo" alt="">
+                    <!--status-->
+                    <div class="status" [ngClass]="project.state">
+                        <span>{{project.state}}</span>
+                    </div>
+                </div>
+                <div class="student_info">
+                    <span class="student_name">{{project.author}}</span><br>
+                    <span class="student_direction">{{project.direction}}</span><br>
+                    <span class="student_country">{{project.country}}</span><br>
+
+                    <button [ngClass]="{'active': project.isFollowing}" (click)="project.isFollowing = !project.isFollowing">{{ project.isFollowing ? 'Following' : 'Follow' }}</button>
+                </div>
+                <div class="student_view">
+                    <span class="watchingCount">{{project.countOfWatching}}</span><br>
+                    <span (click)="likeStudents(project.id)" class="likeCount" [ngClass]="{'active': project.isLiked}">{{project.countOfLike}}</span>
+                </div>
+            </div>
+
+            <div class="student-project">
+                <div *ngFor="let image of project.images" [routerLink]="'/course'">
+                    <img [src]="image" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

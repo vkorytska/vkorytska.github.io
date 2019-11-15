@@ -1,0 +1,316 @@
+//colors:
+$bg: #292731;
+$white: #fff;
+$blue: #2196f3;
+$green: #7fc400;
+$black-text: #041421;
+
+%slider-style {
+  height: 480px;
+  width: 720px;
+  border-radius: 6px;
+  margin-top: 108px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  .layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    border-radius: 6px;
+    background-color: #292731;
+    opacity: 0.6;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    .array {
+      width: 56px;
+      height: 56px;
+    }
+
+    .right {
+      background: url("../../../assets/rightCourse.png") no-repeat;
+      background-size: cover;
+    }
+
+    .left {
+      background: url("../../../assets/leftCourse.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  background: url("../../../assets/slider-section.png") no-repeat center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  width: 100%;
+
+  .center-slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 720px;
+    margin: 0 60px;
+
+    .sharebutton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 80px;
+
+      div {
+        margin-left: 15px;
+      }
+
+      .facebook {
+        background: url("../../../assets/fb-white.png") no-repeat;
+        background-size: contain;
+        width: 7px;
+        height: 15px;
+      }
+
+      .twitter {
+        background: url("../../../assets/tw-white.png") no-repeat;
+        background-size: contain;
+        width: 14px;
+        height: 11px;
+      }
+
+      .linkedn {
+        background: url("../../../assets/ln-white.png") no-repeat;
+        background-size: contain;
+        width: 14px;
+        height: 15px;
+      }
+
+      .instagram {
+        background: url("../../../assets/in-white.png") no-repeat;
+        background-size: contain;
+        width: 14px;
+        height: 15px;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 26px;
+      color: #ffffff;
+      font-family: "Open Sans";
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .slide {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 720px;
+      height: 480px;
+      border-radius: 6px;
+      box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 10px;
+      margin-top: 25px;
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+      }
+
+      .category-section {
+        .category {
+          display: inline-block;
+          padding: 0px 5px;
+          color: $white;
+          background: rgba(0, 0, 0, 0.3);
+          border-radius: 6px;
+          margin-right: 10px;
+          margin-bottom: 5px;
+
+          span {
+            font-size: 10px;
+            font-family: "Open Sans";
+            font-weight: 700;
+            text-align: center;
+          }
+        }
+      }
+
+      .status {
+        display: inline-block;
+        float: right;
+        padding: 0px 5px;
+        border-radius: 6px;
+        color: $white;
+
+        span {
+          font-size: 10px;
+          font-family: "Open Sans";
+          font-weight: 700;
+          text-align: center;
+        }
+      }
+
+      .status.PRO {
+        background: $blue;
+      }
+
+      .status.Plus {
+        background: #c46cd8;
+      }
+
+      .status.Free {
+        background: $green;
+      }
+
+      .status.Optimal {
+        background: #5c4af7;
+      }
+
+      .totalTime {
+        width: 28px;
+        height: 11px;
+        border-radius: 4px;
+        background-color: #232128;
+        font-size: 10px;
+        color: #b9b8bc;
+        font-family: "Open Sans";
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          font-size: 10px;
+          line-height: 22px;
+          color: #b9b8bc;
+          font-family: "Open Sans";
+          font-weight: 700;
+          text-align: center;
+        }
+      }
+
+      .array-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .playHover {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+          width: 68px;
+          height: 68px;
+          border-radius: 34px;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.13);
+
+          div {
+            width: 11px;
+            height: 19px;
+            background: url("../../../assets/playcourse.png") no-repeat;
+            background-size: cover;
+          }
+        }
+
+        .array {
+          width: 56px;
+          height: 56px;
+          visibility: hidden;
+        }
+
+        .right {
+          background: url("../../../assets/rightCourse.png") no-repeat;
+          background-size: cover;
+        }
+
+        .left {
+          background: url("../../../assets/leftCourse.png") no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  .left-slide {
+    @extend %slider-style;
+  }
+
+  .right-slide {
+    @extend %slider-style;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .left-slide,
+    .right-slide {
+      display: none;
+    }
+
+    .center-slide {
+      .slide {
+        .array-section {
+          .array {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .center-slide {
+        margin: 0;
+      .slide {
+        width: 100%;
+
+        .array-section {
+          .playHover {
+            width: 45px;
+            height: 45px;
+            div {
+              width: 6px;
+              height: 11px;
+            }
+          }
+
+          .array {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    .center-slide {
+      .slide {
+        height: 380px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .center-slide {
+      .slide {
+        height: 250px;
+      }
+    }
+  }
+}

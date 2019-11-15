@@ -1,0 +1,28 @@
+<div class="courses-bg">
+        <div class="courses">
+            <div class="main-content">
+                <div *ngFor="let course of courses;">
+                    <div class="course-image" [style.backgroundImage]="'url('+ course.url +')'" [routerLink]="'/course'">
+                        <!--Content of image block-->
+                        <div class="flex-align-start space-between w-100" >
+                            <div class="category-section">
+                                <div *ngFor="let categ of course.category">
+                                    <div class="category">
+                                        <span>{{categ}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="status" [ngClass]="course.status">
+                                <span>{{course.status}}</span>
+                            </div>
+                        </div>
+                        <div class="nameCourse">
+                            <span>{{course.nameCourse}}</span><br>
+                            <span class="author">{{course.author}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

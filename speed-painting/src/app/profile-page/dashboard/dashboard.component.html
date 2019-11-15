@@ -1,0 +1,17 @@
+<div class="dashbord-bg" [style.background-image]="'url(' + imageUrl + ')'">
+    <div class="dashboard-bg_section pr40 pl40">
+      <div class="flex-align-center wrap">
+        <button  class="share-link" [ngClass]="{'active' : isShownShareBtn}" (click)='isShownShareBtn = !isShownShareBtn' ></button>
+        <share-buttons *ngIf="isShownShareBtn"  class=" pl10" 
+          [include]="['google','email','copy']"
+          [url]="'#'"
+        ></share-buttons> 
+      </div>
+      <div class="upload-btn-wrapper">
+          <div class="create-photo">
+              <span>Add photo on cover</span>
+          </div>
+          <input type="file" name="myfile" accept="image/*" (change)="uploadImage($event)" />
+      </div>
+  </div>
+</div>

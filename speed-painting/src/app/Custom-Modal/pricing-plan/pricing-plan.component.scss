@@ -1,0 +1,250 @@
+ /* MODAL STYLES
+-------------------------------*/
+modal {
+    /* modals are hidden by default */
+    display: none;
+
+    .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        overflow: auto;
+        background-color: #00000080;
+
+        .modal-body {
+            width: 90%;
+            max-width: 1420px;
+            height: fit-content;
+            flex: none;
+            background-color: white;
+            padding: 0 15px 40px;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+
+            .close {
+                padding-right: 10px;
+                padding-top: 10px;
+                cursor: pointer;
+            }
+
+            h3 {
+                text-align: center;
+                margin-left: 25px;
+                margin-top: 40px;
+            }
+
+            img {
+                margin-left: 47%;
+            }
+
+            .pricing-plan-section {
+                padding: 40px 0;
+                justify-content: center;
+
+                .category {
+                    margin: 5px;
+                    padding: 40px;
+                    border-radius: 6px;
+                    border: 1px solid #eaeaeb;
+                    text-align: center;
+                    cursor: default;
+                    transition: all 1s;
+
+                    &:hover {
+                        border: 1px solid #2196f3;
+                    }
+
+                    .category_info {
+                        width: 100%;
+
+                        .state {
+                            font-size: 20px;
+                            line-height: 42px;
+                            color: #041421;
+                            font-family: "Work Sans";
+                            font-weight: 600;
+                        }
+
+                        .currency {
+                            font-size: 22px;
+                            line-height: 60px;
+                            color: #2196f3;
+                            font-family: "Work Sans";
+                            font-weight: 400;
+                        }
+
+                        .cost {
+                            font-size: 60px;
+                            line-height: 60px;
+                            color: #041421;
+                            font-family: "Work Sans";
+                            font-weight: 400;
+                        }
+
+                        .mounth {
+                            font-size: 18px;
+                            line-height: 60px;
+                            color: #041421;
+                            font-family: "Work Sans";
+                            font-weight: 400;
+                        }
+
+                        div {
+                            padding-bottom: 40px;
+
+                            .advances {
+                                display: flex;
+                                align-items: center;
+                                font-size: 15px;
+                                color: #041421;
+                                font-family: "Open Sans";
+                                font-weight: 400;
+                            }
+
+                            .active {
+                                &::before {
+                                    content: "";
+                                    display: inline-block;
+                                    width: 18px;
+                                    height: 18px;
+                                    background: url('../../../assets/pricing_plan_active.png') no-repeat;
+                                    background-size: cover;
+                                    margin-right: 10px;
+                                }
+                            }
+
+                            .inactive {
+                                &::before {
+                                    content: "";
+                                    display: inline-block;
+                                    width: 18px;
+                                    height: 18px;
+                                    background: url('../../../assets/pricing_plan_inactive.png') no-repeat;
+                                    background-size: cover;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+
+                    button {
+                        width: 180px;
+                        height: 36px;
+                        border-radius: 18px;
+                        background-color: #2196f3;
+                        border: 1px solid #2196f3;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #ffffff;
+                        font-family: "Work Sans";
+                        font-weight: 600;
+                        text-align: center;
+                        outline: none;
+
+                        &:hover {
+                            box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.5);
+                        }
+                    }
+
+                    button.signUp {
+                        background-color: #ffffff;
+                        color: #2196f3;
+
+                        &:hover {
+                            background-color: #2196f3;
+                            color: #ffffff;
+                        }
+                    }
+                }
+
+                .popular {
+                    padding-top: 6px;
+
+                    &:before {
+                        content:"";
+                        display: inline-block;
+                        position: relative;
+                        background: url('../../../assets/popular_pricing_plan.png') no-repeat;
+                        background-size: cover;
+                        width: 80px;
+                        height: 26px;
+                        right: 106px;
+                        top: 37px;
+                    }
+                }
+
+                @media (max-width: 1403px) {
+                    .category {
+                        width: 398px;
+                    }
+
+                    .popular {
+                        &:before {
+                            right: 160px;
+                        }
+                    }
+                }
+
+                @media (max-width: 958px) {
+                    .category {
+                        width: 292px;
+                    }
+
+                    .popular {
+                        &:before {
+                            right: 106px;
+                        }
+                    }
+                }
+
+                @media (max-width: 704px) {
+                    .category {
+                        padding: 6px 15px 40px;
+                    }
+                }
+
+                @media (max-width: 425px) {
+                    .category {
+                        width: 250px;
+                        padding: 6px 5px 40px;
+                    }
+
+                    .popular {
+                        &:before {
+                            right: 85px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-height: 858px) {
+        .modal {
+            align-items: unset;
+        }
+    }
+
+    @media (max-width: 1569px) {
+        .modal {
+            align-items: unset;
+        }
+    }
+}
+
+body.modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+
+@keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+}

@@ -1,0 +1,19 @@
+<div class="partners container-fluid pr40 pl40">
+    <div class="partners-container">
+        <span class="partners_title">Speed Painting Partners</span><br>
+        <img src="../../../assets/line.png" alt=""><br>
+        <span class="partners_subTitle">Learn more about our growing list of integrations and outstanding community of collaborators.</span>
+        <div class="pt50">
+            <div class="flex-align-center wrap">
+                <div *ngFor="let partner of partners; let i=index" class="partners-section">
+                    <div *ngIf="i<limit">
+                    <a href="{{partner.site}}" target="blank"> <img src="{{partner.url}}" alt="{{partner.name}}"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-section w100 pt30">
+            <button  class="show-button" (click)="show()">{{limit > 5 ? 'Less Partners' : 'All Partners'}}</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+$bg: #f6f6f6;
+$blue: #2196f3;
+$border: #dcdcdd;
+$text: #c1c1c1;
+
+.main-content_bg {
+    background: $bg;
+    text-align: center;
+    padding-bottom: 30px;
+
+    div {
+        padding: 0px 40px;
+        
+        button {
+            width: 124px;
+            border-radius: 25px;
+            background-color: $bg;
+            border: 2px solid $border;
+            padding: 10px;
+            outline: none;
+            font-size: 15px;
+            line-height: 18px;
+            color: $text;
+            font-family: "Work Sans";
+            font-weight: 600;
+            margin: 10px;
+            transition: all 0.3s;
+
+            &:hover {
+                border: 2px solid $blue;
+                color: $blue;
+            }
+        }
+
+        button.active {
+            border: 2px solid $blue;
+            color: $blue;
+        }
+    }
+}

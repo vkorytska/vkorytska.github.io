@@ -1,0 +1,73 @@
+<div class="main-footer-background container-fluid pr40 pl40">
+    <div class="main-footer_navigation">
+        <nav>
+            <div class="pb10"><span class="bold">About school</span></div>
+            <a [routerLink]="'/courses'"><span>Online courses</span></a><br>
+            <a [routerLink]="'/projects'"><span>Projects</span></a><br>
+            <a [routerLink]="'/students'"><span>Students</span></a><br>
+        </nav>
+        <nav>
+            <div class="pb10"><span class="bold">Partners</span><br></div>
+            <a href="javascript:void(0)" (click)="openModal('partner-modal')"><span>Become a partner</span></a><br>
+            <a [routerLink]="'/partners'"><span>Our partners</span></a><br>
+        </nav>
+        <nav>
+            <div class="pb10"><span class="bold light">Help</span></div>
+            <a href="javascript:void(0)"><span class="dark">Help center</span></a><br>
+            <a href="javascript:void(0)"><span>Video School</span></a><br>
+            <a href="javascript:void(0)"><span>FAQ</span></a><br>
+            <a href="javascript:void(0)"><span>Forums</span></a><br>
+        </nav> 
+        <nav>
+            <div class="pb10"><span class="bold">Upgrade artist</span></div>
+            <a href="javascript:void(0);" (click)="openModal('pricing-plan')">
+                <div class="flex">
+                    <span>Speed Painting</span>
+                    <div class="status">
+                        <span>Optimal</span>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0);" (click)="openModal('pricing-plan')">
+                <div class="flex">
+                    <span>Speed Painting</span>
+                    <div class="status">
+                        <span>Plus</span>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0);" (click)="openModal('pricing-plan')">
+                <div class="flex">
+                    <span>Speed Painting</span>
+                    <div class="status">
+                        <span>PRO</span>
+                    </div>
+                </div>
+            </a>
+        </nav>
+    </div>
+    
+    <nav>
+        <div class="pb10"><span class="bold">Subscribe</span></div>
+        <div>
+            <form action="#" method="post">
+                <input class="mb10" type="email" name="email" autocomplete="off" placeholder="Your email">
+                <input type="submit" value="SUBSCRIBE">
+            </form>
+            <div class="space-between">
+                <a href="https://www.facebook.com/" target="blank"><div class="icon fb-icon"></div></a>
+                <a href="https://twitter.com/" target="blank"><div class="icon tw-icon"></div></a>
+                <a href="www.linkedin.com/‎" target="blank"><div class="icon in-icon"></div></a>
+                <a href="https://www.instagram.com/" target="blank"><div class="icon inst-icon"></div></a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="under-footer container-fluid pr40 pl40">
+    <div class="space-between flex-align-center">
+        <a [routerLink]="routerLinkValue"><img src="../../../assets/logotype-footer.png" alt="logotype"></a>
+        <span>V.Korytska, 2019</span>
+    </div>
+</div>
+<pricing-plan></pricing-plan>
+<partner-modal></partner-modal>

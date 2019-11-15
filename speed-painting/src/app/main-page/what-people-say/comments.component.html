@@ -1,0 +1,28 @@
+<div class="comments container-fluid">
+    <div class="header-title">
+        <span class="header-title_main">What people say?</span><br>
+        <img src="../../../assets/line.png" alt=""><br>
+    </div>
+    <div class="comments-section wrap flex-align-center">
+        <button class="previous-btn" (click)="previous()"></button>
+        <div class="commentator wrap flex-align-center">
+            <div class="photo-small" [style.backgroundImage]="'url('+ comments[key == 0 ? comments.length - 2 : key == 1 ? comments.length - 3 : key - 2].url +')'"></div>
+            <div class="photo-small" [style.backgroundImage]="'url('+ comments[key == 0 ? comments.length - 1 : key - 1].url +')'"></div>
+            <div class="photo-large" [style.backgroundImage]="'url('+ comments[key].url +')'">
+                <div class="status" [ngClass]="comments[key].status">
+                        <span>{{comments[key].status}}</span>
+                </div>
+                <div class="comentator-name">
+                    <span class="author">{{comments[key].author}}</span><br>
+                    <span>{{comments[key].date}}</span>
+                </div>
+            </div>
+            <div class="photo-small" [style.backgroundImage]="'url('+ comments[key == comments.length - 1 ? 0 : key + 1].url +')'"></div>
+            <div class="photo-small" [style.backgroundImage]="'url('+ comments[key == comments.length - 1 ? 1 : key == comments.length - 2 ? 0 : key + 2].url +')'"></div>
+        </div>
+        <button class="next-btn" (click)="next()"></button>
+        <div class="comment w-100">
+                <span>{{comments[key].comment}}</span>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,363 @@
+//colors:
+$bg: #232128;
+$white: #fff;
+$blue: #2196f3;
+$green: #7fc400;
+$black-text: #041421;
+
+.main-header-background {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: $bg;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    .header{
+        width: 100%;
+        align-items: center;
+        height: 70px;
+
+
+        .menu-mobile {
+            width: 280px;
+            text-align: right;
+            right: 0px;
+            position: absolute;
+            top: 0px;
+            background: $blue;
+            padding-top: 115px;
+            padding-bottom: 80px;
+            z-index: 1;
+
+            .nav-mobile {
+                %active-link {
+                    width: 100%;
+                    padding: 20px 30px 20px 0px;
+                    display: block;
+                    font: 14px 'Work Sans', sans-serif;
+                    line-height: 18px;
+                    color: $white;
+                    font-weight: 600;
+                    text-decoration: none;
+                    position: relative;
+                    z-index: 0;
+                    cursor: pointer;
+                    background: transparent;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background: #001b5229;
+                    }
+        
+                    li {
+                        list-style: none;
+                    }
+                }
+
+                a:not(.active) {
+                    @extend %active-link;
+                }
+
+                a.active {
+                    @extend %active-link;
+                    background: #001b5229;
+                }
+            }
+
+            %bordersOut-before-after {
+                position: absolute;
+                left: 0px;
+                width: 100%;
+                height: 2px;
+                background: $white;
+                content: "";
+                opacity: 0;
+                transition: all 0.3s;
+            }
+
+            .bordersOut a.active:before, .bordersOut a.active:after {
+                @extend %bordersOut-before-after;
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            .bordersOut a.active:before {
+                top: 0px;
+                transform: translateY(0px);
+            }
+
+            .bordersOut a.active:after {
+                bottom: 0px;
+                transform: translateY(0px);
+            }
+
+            .bordersOut a:before, .bordersOut a:after {
+                @extend %bordersOut-before-after;
+            }
+        
+            .bordersOut a:before {
+                top: 0px;
+                transform: translateY(10px);
+            }
+        
+            .bordersOut a:after {
+                bottom: 0px;
+                transform: translateY(-10px);
+            }
+        
+            .bordersOut a:hover:before, .bordersOut a:hover:after {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+
+    .navigation {
+
+        a {
+            display: inline-block;
+            font: 14px 'Work Sans', sans-serif;
+            line-height: 18px;
+            color: $white;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 0px 10px;
+            padding: 10px 10px;
+            position: relative;
+            z-index: 0;
+            cursor: pointer;
+
+            li {
+                list-style: none;
+            }
+        }
+
+        a.active {
+            border-radius: 27px;
+            background-color: $blue;
+            text-align: center;
+            padding: 10px 20px;
+        }
+    }
+
+     /* Top and Bottom borders go out */
+    .topBotomBordersOut a:not(.active):before, .topBotomBordersOut a:not(.active):after {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: $white;
+        content: "";
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    .topBotomBordersOut a:not(.active):before {
+        top: 0px;
+        transform: translateY(10px);
+    }
+
+    .topBotomBordersOut a:not(.active):after {
+        bottom: 0px;
+        transform: translateY(-10px);
+    }
+
+    .topBotomBordersOut a:not(.active):hover:before, .topBotomBordersOut a:not(.active):hover:after {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .search-form{
+        display: flex;
+        width: auto;
+        height: 49px;
+
+        &:focus-within {
+            input[type="text"] {
+                width: 115px;
+                border-bottom: 1px solid $white;
+                padding: 0 15px 0 10px;
+            }
+        }
+
+        input[type="text"] {
+            height: 40px;
+            position: relative;
+            font: 14px 'Work Sans', sans-serif;
+            border: none;
+            outline: none;
+            color: $white;
+            width: 0px;
+            left: 5px;
+            background: none;
+            transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+            cursor: text;
+
+            &::placeholder{
+                color: #ffffff6e;
+            }
+        }
+        
+
+
+        input[type="submit"] {
+            height: 50px;
+            width: 50px;
+            background: url('../../../assets/icon_search.png') center center no-repeat;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+
+    .account {
+        width: 40px;
+        height: 40px;
+        background: url('../../../assets/mike-brown.png') no-repeat;
+        border-radius: 20px;
+        border: 2px solid #6a686d;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            border: 2px solid #2196f3;
+        }
+    }
+
+    .log-in {
+        text-decoration: none;
+        font: 14px 'Work Sans', sans-serif;
+        line-height: 18px;
+        color: $white;
+        font-weight: 600;
+        padding: 0px 10px;
+        background: no-repeat;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            display: block;
+            background: url("../../../assets/login.png") no-repeat;
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 0 6px 0 0;
+        }
+
+    }
+
+    .menu-small {
+        width: 60px;
+        height: 43px;
+        cursor: pointer;
+
+        .burger {
+
+            span, span:before, span:after {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: $white;
+                transition: all 0.5s;
+                backface-visibility: hidden;
+            }
+    
+            span {
+                position: relative;
+                margin: 20px 30px;
+                padding: 0%;
+            }
+    
+            span:before, span:after {
+                position: absolute;
+                content: "";
+            }
+    
+            span:before {
+                top: -10px;
+                right: -1px;
+            }
+    
+            span:after {
+                top: 9px;
+                right: -1px;
+            }
+
+            .btn.selected, .btn.selected:after ,.btn.selected:before {
+                width: 8px;
+                height: 8px;
+                border-radius: 30px;
+            }
+                
+            .btn.selected {
+                opacity: 1;
+                z-index: 2;
+                
+                &:before {
+                    top: -1px;
+                    transform: translateX(15px) rotate(0deg);
+                }
+                
+                &:after {
+                    top: -1px;
+                    transform: translateX(30px) rotate(0deg); 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .menu-large {
+        display: none;
+    }
+
+    .nav-right {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .menu-small{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .main-header-background {
+        .header {
+            .logo-large {
+                display: inline;
+            }
+
+            .logo-small {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-header-background {
+        .header {
+            .logo-large {
+                display: none;
+            }
+
+            .logo-small {
+                display: inline;
+            }
+
+            .nav-right{
+                .search-form {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<div class="partner-dashbord-bg" [style.background-image]="'url(' + imageUrl + ')'">
+    <div class="partner-dashboard-bg_section pr40 pl40">
+        <h2>Speed Painting Partner Network</h2><br>
+        <h6>Seamless integrations and powerful collaborations for creators, marketers and brands</h6><br>
+        <button class="becomePartner-link" (click)="openModal('partner-modal')">
+            <span>Become a partner</span>
+        </button>
+    </div>
+</div>
+<div class="partners container-fluid pr40 pl40">
+    <div class="partners-container">
+        <div class="header-title w100">
+            <h2>Our Partners</h2>
+            <img src="../../../assets/line.png" alt="">
+            <h6>Learn more about our growing list of integrations and outstanding community of collaborators.
+            </h6>
+        </div>
+        <div class="partners-section w100">
+            <div class="partners-section_block">
+                <div *ngFor="let partner of partners; let i=index" [style.background-image]="'url(' + partner.url + ')'">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<partner-modal></partner-modal>

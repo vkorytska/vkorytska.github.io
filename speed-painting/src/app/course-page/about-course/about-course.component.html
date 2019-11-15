@@ -1,0 +1,105 @@
+<div class="aboutCourse container-fluid pr40 pl40 pt70">
+    <div class="aboutCourse_container">
+        <div class="aboutCourse-section center-text">
+            <h2>About course</h2>
+            <img src="../../../assets/line.png" alt=""><br>
+            <span class="secondary-text">How often do you admire the works of contemporary illustrators in magazines,
+                books or even cups of coffee and catch yourself thinking: "Would I learn so much!"? Do you think it's
+                the lot of rare lucky people to create illustrations and get paid for it? In fact, this is the result of
+                a lot of work. Illustrator can be anyone who is ready to spend enough time and effort to train.</span>
+            <h4 class="pt35">What will give you a course:</h4>
+        </div>
+
+        <div class="advantage pt40 pb40">
+            <div class="advantage-section">
+                <div class="advantage-section_single">
+                    <span class="round">1</span>
+                    <span>Find out what the work of the modern illustrator is.</span>
+                </div>
+                <div class="advantage-section_single">
+                    <span class="round">2</span>
+                    <span>Meet different techniques and types of graphic and pictorial means of expressiveness.</span>
+                </div>
+                <div class="advantage-section_single">
+                    <span class="round">3</span>
+                    <span>Find out what stylization is and what its types exist. Learn to use them in your work.</span>
+                </div>
+            </div>
+
+            <div class="advantage-section">
+                <div class="advantage-section_single">
+                    <span class="round">4</span>
+                    <span>Learn to create whole worlds in which your characters will live and act.</span>
+                </div>
+                <div class="advantage-section_single">
+                    <span class="round">5</span>
+                    <span>Learn how to convey the mood and character of the characters, how to properly place the
+                        characters in their work.</span>
+                </div>
+                <div class="advantage-section_single">
+                    <span class="round">6</span>
+                    <span>Find your own style that not only makes your work recognizable, but also highlights your
+                        strengths.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="teacher container-fluid pr40 pl40 pt70">
+    <div class="teacher-container">
+        <h2>Teacher</h2>
+        <img src="../../../assets/line.png" alt=""><br>
+    </div>
+
+    <div class="teacher-section">
+        <div class="teacher-section_about">
+            <h3>Michael Barney</h3>
+            <span class="category">Character designer</span><br>
+            <span>Graduated from the Kazan Federal University, faculty of art education.</span><br>
+            <span>Participant and lecturer at various festivals: "It's time to draw" (2015, 2016), Wake up day (2015,
+                2016), Doski-Kraski and others. She worked on illustrations for companies such as Kinder, Coca-Cola,
+                Dress Code magazine.</span><br>
+            <span>Collaborated with such restaurant groups as Itali Group, PROBKA family, Bonappe.</span>
+        </div>
+        <div class="teacher-section_photo"></div>
+    </div>
+</div>
+
+<div class="watched  container-fluid pr40 pl40 pt70">
+    <div class="watched-container">
+        <h2>You watched</h2>
+        <img src="../../../assets/line.png" alt="">
+        <div class="w100 pt40 flex-align-center wrap">
+            <!--Start courses section-->
+            <div *ngFor="let course of courses; let i=index" class="flex-align-center">
+                <div class="course-image" [style.backgroundImage]="'url('+ course.url +')'">
+                    <!--Content of image block-->
+                    <div class="flex-align-start space-between wrap w-100">
+                        <div class="category-section">
+                            <div *ngFor="let categ of course.category; let i=index" class="inline">
+                                <div class="category">
+                                    <span>{{categ}}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="status" [ngClass]="course.status">
+                            <span>{{course.status}}</span>
+                        </div>
+                    </div>
+                    <div class="flex-align-end space-between w-100">
+                        <div class="nameCourse">
+                            <span>{{course.nameCourse}}</span><br>
+                            <span class="author">{{course.author}}</span>
+                        </div>
+                        <div class="totalTime">
+                            <span>{{course.totalTime}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End courses section-->
+        </div>
+    </div>
+</div>

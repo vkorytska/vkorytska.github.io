@@ -1,0 +1,58 @@
+<header *ngIf="isActivated"></header>
+<div class="main-header-background container-fluid pr40 pl40" [class.activatedHeader]="isActivated">
+  <div *ngIf="!isActivated" class="row space-between header">
+    <a class="w30" [routerLink]="'/main'">
+        <div class="logo">
+                <img class="logo-small" src="../../../assets/logo.png" alt="logotype">
+                <img class="logo-large" src="../../../assets/logotype.png" alt="logotype">
+        </div>
+    </a>  
+    <div class="flex-align-center p0 menu-large">
+      <ul class="navigation topBotomBordersOut m0 p0">
+          <a [routerLink]="'/courses'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><li>Courses</li></a>
+          <a [routerLink]="'/projects'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>Projects</li></a>
+          <a [routerLink]="'/students'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><li>Students</li></a>
+          <a [routerLink]="'/partners'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>Partners</li></a>
+          <a [routerLink]="'/main'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>About school</li></a>
+      </ul>
+    </div>
+    <div class="w30 flex-align-center flex-end nav-right">
+      <a class="search-form">
+          <input name="search" type="text" placeholder="Search..." autocomplete="off">
+          <input value="" type="submit">
+      </a>
+      <button class="log-in" (click)="showLogInModal()">Log in</button>
+      <a href="javascript:void(0)" class="navigation-pro" (click)="openModal('pricing-plan')">Become a Pro</a>
+      <div class="menu-small" (click)="openMenu = !openMenu">
+          <a class="burger" href="#" >
+              <span id="burger-btn" [ngClass]="openMenu ? 'btn selected' : 'btn'"></span>
+          </a>
+          <div [hidden]="!openMenu || !hasClassName()" class="menu-mobile">
+              <ul class="nav-mobile bordersOut m0 p0">
+                  <a [routerLink]="'/courses'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><li>Courses</li></a>
+                  <a [routerLink]="'/projects'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>Projects</li></a>
+                  <a [routerLink]="'/students'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><li>Students</li></a>
+                  <a [routerLink]="'/partners'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>Partners</li></a>
+                  <a [routerLink]="'/main'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><li>About school</li></a>
+              </ul>
+            </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="header-title">
+    <span class="header-title_main">What is Speed painting?</span><br>
+    <div class="header-title_secondary">
+      <span>We have created for you an unique online drawing school that including all modern methods of online learning in the most sought-after areas in painting.</span>
+    </div>
+    <div class="w-100">
+      <button class="pro" (click)="openModal('pricing-plan')">Join Pro</button>
+      <button [class.hide]="isActivated" class="free" (click)="openModal('pricing-plan')">Join Free</button>
+    </div>
+  </div>
+
+  <div class="scroll">
+    <span class="scroll_element">Scroll for more</span>
+  </div>
+</div>
+<pricing-plan></pricing-plan>

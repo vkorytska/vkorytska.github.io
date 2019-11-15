@@ -1,0 +1,31 @@
+<div class="projects-bg">
+    <div class="projects">
+        <div class="projects-content">
+            <div *ngFor="let project of projects; let key = index">
+                <div class="project-item">
+                    <!--Content of image block-->
+                    <div class="project-image" [style.backgroundImage]="'url('+ project.url +')'">
+                        <div class="share-course" (click)="IsShownShareBtn(key)"><img src="../../../assets/share-icon.png" alt="Share"></div>
+                        <div class="play-course"><img src="../../../assets/play-icon.png" alt="Play"></div>
+                    </div>
+                    <share-buttons class="pt20 pl10" *ngIf="project.isShownShareBtn" 
+                        [include]="['google','email','copy']"
+                        [url]="'#'"
+                    ></share-buttons>  
+                    <div class="project-text">
+                        <div class="project-name">{{project.nameProject}}</div>
+                        <div class="flex project-user">
+                            <img [src]="project.photo" alt="User">
+                            <span>{{project.author}}</span>
+                        </div>
+                        <div class="project-social flex">
+                            <span class="revision">{{project.revision}}</span>
+                            <span class="like">{{project.like}}</span>
+                            <span class="comment">{{project.comment}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
