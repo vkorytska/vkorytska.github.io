@@ -152,5 +152,5 @@
       }
     }
   },
-  "defaultProject": "dist"
+  "defaultProject": "sp-app"
 }
