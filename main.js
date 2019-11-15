@@ -271,7 +271,7 @@ var UserDialogComponent = /** @class */ (function () {
     };
     UserDialogComponent.prototype.logOut = function () {
         localStorage.setItem('isActivated', 'false');
-        window.location.href = "/main";
+        window.location.replace("https://vkorytska.github.io/main");
     };
     UserDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1542,7 +1542,7 @@ var LogInComponent = /** @class */ (function () {
     };
     LogInComponent.prototype.changeLocation = function () {
         localStorage.setItem('isActivated', 'true');
-        window.location.href = '/myProfile';
+        window.location.replace('https://vkorytska.github.io/myProfile');
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
