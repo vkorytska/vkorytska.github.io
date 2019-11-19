@@ -568,6 +568,11 @@ __webpack_require__.r(__webpack_exports__);
 var AppComponent = /** @class */ (function () {
     function AppComponent(router) {
         this.router = router;
+        var path = localStorage.getItem('path');
+        if (path) {
+            localStorage.removeItem('path');
+            this.router.navigate([path]);
+        }
     }
     AppComponent.prototype.ngOnInit = function () {
         this.router.events.subscribe(function (evt) {
@@ -800,7 +805,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var appRoutes = [
-    { path: '', component: _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_1__["MainPageTemplateComponent"] },
+    { path: '', redirectTo: 'main', pathMatch: 'full' },
     { path: 'main', component: _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_1__["MainPageTemplateComponent"] },
     { path: 'myProfile', component: _profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_2__["MyProfileComponent"] },
     { path: 'courses', component: _courses_page_courses_page_component__WEBPACK_IMPORTED_MODULE_3__["CoursesPageComponent"] },
@@ -810,7 +815,7 @@ var appRoutes = [
     { path: 'students', component: _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_7__["StudentsPageComponent"] },
     { path: '**', component: _not_found_component__WEBPACK_IMPORTED_MODULE_8__["NotFoundComponent"] }
 ];
-var routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes, { useHash: true });
+var routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes);
 
 
 /***/ }),
@@ -1551,8 +1556,7 @@ var LogInComponent = /** @class */ (function () {
     };
     LogInComponent.prototype.changeLocation = function () {
         localStorage.setItem('isActivated', 'true');
-        this.router.navigate(['/myProfile']);
-        //window.location.pathname="/myProfile";
+        this.router.navigateByUrl('/myProfile');
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
@@ -2193,7 +2197,7 @@ var NotFoundComponent = /** @class */ (function () {
     NotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'not-found-app',
-            template: "<h3>\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u0430</h3>"
+            template: "\n        <script>\n            const path = window.location.pathname.slice(1);\n            localStorage.setItem('path', path);\n            window.location.href='../';\n        </script>"
         })
     ], NotFoundComponent);
     return NotFoundComponent;
