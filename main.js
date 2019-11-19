@@ -566,11 +566,11 @@ __webpack_require__.r(__webpack_exports__);
 var AppComponent = /** @class */ (function () {
     function AppComponent(router) {
         this.router = router;
-        var path = localStorage.getItem('path');
-        if (path) {
-            localStorage.removeItem('path');
-            this.router.navigate([path]);
-        }
+        // let path = localStorage.getItem('path');
+        // if(path) {
+        //   localStorage.removeItem('path');
+        //   this.router.navigate([path]);
+        // }
     }
     AppComponent.prototype.ngOnInit = function () {
         this.router.events.subscribe(function (evt) {
@@ -618,43 +618,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _directives_click_outside_directive__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./_directives/click-outside.directive */ "./src/app/_directives/click-outside.directive.ts");
 /* harmony import */ var _services_modal_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./_services/modal.service */ "./src/app/_services/modal.service.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.routing.module */ "./src/app/app.routing.module.ts");
-/* harmony import */ var _main_page_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./main-page/main-header/main-header.component */ "./src/app/main-page/main-header/main-header.component.ts");
-/* harmony import */ var _main_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./main-page/online-courses/online-courses.component */ "./src/app/main-page/online-courses/online-courses.component.ts");
-/* harmony import */ var _main_page_about_speed_painting_about_speed_painting_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./main-page/about-speed-painting/about-speed-painting.component */ "./src/app/main-page/about-speed-painting/about-speed-painting.component.ts");
-/* harmony import */ var _main_page_why_speed_painting_why_speed_painting_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./main-page/why-speed-painting/why-speed-painting.component */ "./src/app/main-page/why-speed-painting/why-speed-painting.component.ts");
-/* harmony import */ var _main_page_welcome_school_welcome_school_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./main-page/welcome-school/welcome-school.component */ "./src/app/main-page/welcome-school/welcome-school.component.ts");
-/* harmony import */ var _main_page_what_people_say_comments_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./main-page/what-people-say/comments.component */ "./src/app/main-page/what-people-say/comments.component.ts");
-/* harmony import */ var _main_page_partners_partners_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./main-page/partners/partners.component */ "./src/app/main-page/partners/partners.component.ts");
-/* harmony import */ var _main_page_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./main-page/main-footer/main-footer.component */ "./src/app/main-page/main-footer/main-footer.component.ts");
-/* harmony import */ var _main_page_log_in_log_in_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./main-page/log-in/log-in.component */ "./src/app/main-page/log-in/log-in.component.ts");
-/* harmony import */ var _profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./profile-page/profile-page.component */ "./src/app/profile-page/profile-page.component.ts");
-/* harmony import */ var _not_found_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./not-found.component */ "./src/app/not-found.component.ts");
-/* harmony import */ var _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./main-page/main-page-template/main-page-template.component */ "./src/app/main-page/main-page-template/main-page-template.component.ts");
-/* harmony import */ var _profile_page_header_header_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./profile-page/header/header.component */ "./src/app/profile-page/header/header.component.ts");
-/* harmony import */ var _profile_page_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./profile-page/dashboard/dashboard.component */ "./src/app/profile-page/dashboard/dashboard.component.ts");
-/* harmony import */ var _profile_page_user_information_user_information_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./profile-page/user-information/user-information.component */ "./src/app/profile-page/user-information/user-information.component.ts");
-/* harmony import */ var _profile_page_main_content_main_content_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./profile-page/main-content/main-content.component */ "./src/app/profile-page/main-content/main-content.component.ts");
-/* harmony import */ var _profile_page_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./profile-page/information-section/information-section.component */ "./src/app/profile-page/information-section/information-section.component.ts");
-/* harmony import */ var _profile_page_courses_section_courses_section_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./profile-page/courses-section/courses-section.component */ "./src/app/profile-page/courses-section/courses-section.component.ts");
-/* harmony import */ var _profile_page_project_section_project_section_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./profile-page/project-section/project-section.component */ "./src/app/profile-page/project-section/project-section.component.ts");
-/* harmony import */ var _courses_page_courses_page_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./courses-page/courses-page.component */ "./src/app/courses-page/courses-page.component.ts");
-/* harmony import */ var _partners_page_partners_page_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./partners-page/partners-page.component */ "./src/app/partners-page/partners-page.component.ts");
-/* harmony import */ var _partners_page_partner_content_partner_content_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./partners-page/partner-content/partner-content.component */ "./src/app/partners-page/partner-content/partner-content.component.ts");
-/* harmony import */ var _courses_page_teachers_teachers_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./courses-page/teachers/teachers.component */ "./src/app/courses-page/teachers/teachers.component.ts");
-/* harmony import */ var _courses_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./courses-page/online-courses/online-courses.component */ "./src/app/courses-page/online-courses/online-courses.component.ts");
-/* harmony import */ var _course_page_course_page_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./course-page/course-page.component */ "./src/app/course-page/course-page.component.ts");
-/* harmony import */ var _course_page_about_course_about_course_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./course-page/about-course/about-course.component */ "./src/app/course-page/about-course/about-course.component.ts");
-/* harmony import */ var _course_page_course_slider_course_slider_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./course-page/course-slider/course-slider.component */ "./src/app/course-page/course-slider/course-slider.component.ts");
-/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm5/service-worker.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _projects_page_project_page_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./projects-page/project-page.component */ "./src/app/projects-page/project-page.component.ts");
-/* harmony import */ var _projects_page_project_content_project_content_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./projects-page/project-content/project-content.component */ "./src/app/projects-page/project-content/project-content.component.ts");
-/* harmony import */ var _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./students-page/students-page.component */ "./src/app/students-page/students-page.component.ts");
-/* harmony import */ var _students_page_student_component_student_content_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./students-page/student-component/student-content.component */ "./src/app/students-page/student-component/student-content.component.ts");
-/* harmony import */ var _Custom_Modal_user_dialog_user_dialog_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./Custom-Modal/user-dialog/user-dialog.component */ "./src/app/Custom-Modal/user-dialog/user-dialog.component.ts");
-/* harmony import */ var _Custom_Modal_pricing_plan_pricing_plan_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./Custom-Modal/pricing-plan/pricing-plan.component */ "./src/app/Custom-Modal/pricing-plan/pricing-plan.component.ts");
-/* harmony import */ var _Custom_Modal_partner_modal_partner_modal_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./Custom-Modal/partner-modal/partner-modal.component */ "./src/app/Custom-Modal/partner-modal/partner-modal.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.routing.module */ "./src/app/app.routing.module.ts");
+/* harmony import */ var _main_page_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./main-page/main-header/main-header.component */ "./src/app/main-page/main-header/main-header.component.ts");
+/* harmony import */ var _main_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./main-page/online-courses/online-courses.component */ "./src/app/main-page/online-courses/online-courses.component.ts");
+/* harmony import */ var _main_page_about_speed_painting_about_speed_painting_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./main-page/about-speed-painting/about-speed-painting.component */ "./src/app/main-page/about-speed-painting/about-speed-painting.component.ts");
+/* harmony import */ var _main_page_why_speed_painting_why_speed_painting_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./main-page/why-speed-painting/why-speed-painting.component */ "./src/app/main-page/why-speed-painting/why-speed-painting.component.ts");
+/* harmony import */ var _main_page_welcome_school_welcome_school_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./main-page/welcome-school/welcome-school.component */ "./src/app/main-page/welcome-school/welcome-school.component.ts");
+/* harmony import */ var _main_page_what_people_say_comments_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./main-page/what-people-say/comments.component */ "./src/app/main-page/what-people-say/comments.component.ts");
+/* harmony import */ var _main_page_partners_partners_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./main-page/partners/partners.component */ "./src/app/main-page/partners/partners.component.ts");
+/* harmony import */ var _main_page_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./main-page/main-footer/main-footer.component */ "./src/app/main-page/main-footer/main-footer.component.ts");
+/* harmony import */ var _main_page_log_in_log_in_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./main-page/log-in/log-in.component */ "./src/app/main-page/log-in/log-in.component.ts");
+/* harmony import */ var _profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./profile-page/profile-page.component */ "./src/app/profile-page/profile-page.component.ts");
+/* harmony import */ var _not_found_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./not-found.component */ "./src/app/not-found.component.ts");
+/* harmony import */ var _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./main-page/main-page-template/main-page-template.component */ "./src/app/main-page/main-page-template/main-page-template.component.ts");
+/* harmony import */ var _profile_page_header_header_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./profile-page/header/header.component */ "./src/app/profile-page/header/header.component.ts");
+/* harmony import */ var _profile_page_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./profile-page/dashboard/dashboard.component */ "./src/app/profile-page/dashboard/dashboard.component.ts");
+/* harmony import */ var _profile_page_user_information_user_information_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./profile-page/user-information/user-information.component */ "./src/app/profile-page/user-information/user-information.component.ts");
+/* harmony import */ var _profile_page_main_content_main_content_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./profile-page/main-content/main-content.component */ "./src/app/profile-page/main-content/main-content.component.ts");
+/* harmony import */ var _profile_page_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./profile-page/information-section/information-section.component */ "./src/app/profile-page/information-section/information-section.component.ts");
+/* harmony import */ var _profile_page_courses_section_courses_section_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./profile-page/courses-section/courses-section.component */ "./src/app/profile-page/courses-section/courses-section.component.ts");
+/* harmony import */ var _profile_page_project_section_project_section_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./profile-page/project-section/project-section.component */ "./src/app/profile-page/project-section/project-section.component.ts");
+/* harmony import */ var _courses_page_courses_page_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./courses-page/courses-page.component */ "./src/app/courses-page/courses-page.component.ts");
+/* harmony import */ var _partners_page_partners_page_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./partners-page/partners-page.component */ "./src/app/partners-page/partners-page.component.ts");
+/* harmony import */ var _partners_page_partner_content_partner_content_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./partners-page/partner-content/partner-content.component */ "./src/app/partners-page/partner-content/partner-content.component.ts");
+/* harmony import */ var _courses_page_teachers_teachers_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./courses-page/teachers/teachers.component */ "./src/app/courses-page/teachers/teachers.component.ts");
+/* harmony import */ var _courses_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./courses-page/online-courses/online-courses.component */ "./src/app/courses-page/online-courses/online-courses.component.ts");
+/* harmony import */ var _course_page_course_page_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./course-page/course-page.component */ "./src/app/course-page/course-page.component.ts");
+/* harmony import */ var _course_page_about_course_about_course_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./course-page/about-course/about-course.component */ "./src/app/course-page/about-course/about-course.component.ts");
+/* harmony import */ var _course_page_course_slider_course_slider_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./course-page/course-slider/course-slider.component */ "./src/app/course-page/course-slider/course-slider.component.ts");
+/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm5/service-worker.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _projects_page_project_page_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./projects-page/project-page.component */ "./src/app/projects-page/project-page.component.ts");
+/* harmony import */ var _projects_page_project_content_project_content_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./projects-page/project-content/project-content.component */ "./src/app/projects-page/project-content/project-content.component.ts");
+/* harmony import */ var _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./students-page/students-page.component */ "./src/app/students-page/students-page.component.ts");
+/* harmony import */ var _students_page_student_component_student_content_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./students-page/student-component/student-content.component */ "./src/app/students-page/student-component/student-content.component.ts");
+/* harmony import */ var _Custom_Modal_user_dialog_user_dialog_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./Custom-Modal/user-dialog/user-dialog.component */ "./src/app/Custom-Modal/user-dialog/user-dialog.component.ts");
+/* harmony import */ var _Custom_Modal_pricing_plan_pricing_plan_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./Custom-Modal/pricing-plan/pricing-plan.component */ "./src/app/Custom-Modal/pricing-plan/pricing-plan.component.ts");
+/* harmony import */ var _Custom_Modal_partner_modal_partner_modal_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./Custom-Modal/partner-modal/partner-modal.component */ "./src/app/Custom-Modal/partner-modal/partner-modal.component.ts");
+
 
 
 
@@ -712,54 +714,55 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _Filter_filter_pipe__WEBPACK_IMPORTED_MODULE_7__["FilterDataPipe"],
                 _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
-                _main_page_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_13__["MainHeaderComponent"],
-                _main_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_14__["OnlineCoursesComponent"],
-                _main_page_about_speed_painting_about_speed_painting_component__WEBPACK_IMPORTED_MODULE_15__["AboutSpeedPaintingComponent"],
-                _main_page_why_speed_painting_why_speed_painting_component__WEBPACK_IMPORTED_MODULE_16__["WhySpeedPaintingComponent"],
-                _main_page_welcome_school_welcome_school_component__WEBPACK_IMPORTED_MODULE_17__["WelcomeSchoolComponent"],
-                _main_page_what_people_say_comments_component__WEBPACK_IMPORTED_MODULE_18__["CommentsComponent"],
-                _main_page_partners_partners_component__WEBPACK_IMPORTED_MODULE_19__["PartnersComponent"],
-                _main_page_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_20__["MainFooterComponent"],
-                _main_page_log_in_log_in_component__WEBPACK_IMPORTED_MODULE_21__["LogInComponent"],
-                _not_found_component__WEBPACK_IMPORTED_MODULE_23__["NotFoundComponent"],
-                _profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_22__["MyProfileComponent"],
-                _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_24__["MainPageTemplateComponent"],
-                _profile_page_header_header_component__WEBPACK_IMPORTED_MODULE_25__["HeaderComponent"],
-                _profile_page_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_26__["DashboardComponent"],
-                _profile_page_user_information_user_information_component__WEBPACK_IMPORTED_MODULE_27__["UserInformationComponent"],
-                _profile_page_main_content_main_content_component__WEBPACK_IMPORTED_MODULE_28__["MainContentComponent"],
-                _profile_page_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_29__["InformationSectionComponent"],
-                _profile_page_courses_section_courses_section_component__WEBPACK_IMPORTED_MODULE_30__["CoursesComponent"],
-                _profile_page_project_section_project_section_component__WEBPACK_IMPORTED_MODULE_31__["ProjectSectionComponent"],
-                _courses_page_courses_page_component__WEBPACK_IMPORTED_MODULE_32__["CoursesPageComponent"],
-                _partners_page_partners_page_component__WEBPACK_IMPORTED_MODULE_33__["PartnersPageComponent"],
-                _partners_page_partner_content_partner_content_component__WEBPACK_IMPORTED_MODULE_34__["PartnersContentComponent"],
-                _courses_page_teachers_teachers_component__WEBPACK_IMPORTED_MODULE_35__["TeachersComponent"],
-                _courses_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_36__["CoursesTemplateComponent"],
-                _course_page_course_page_component__WEBPACK_IMPORTED_MODULE_37__["CoursePageComponent"],
-                _course_page_about_course_about_course_component__WEBPACK_IMPORTED_MODULE_38__["AboutCourseComponent"],
-                _course_page_course_slider_course_slider_component__WEBPACK_IMPORTED_MODULE_39__["CourseSliderComponent"],
-                _projects_page_project_page_component__WEBPACK_IMPORTED_MODULE_42__["ProjectPageComponent"],
-                _projects_page_project_content_project_content_component__WEBPACK_IMPORTED_MODULE_43__["ProjectContentComponent"],
-                _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_44__["StudentsPageComponent"],
-                _students_page_student_component_student_content_component__WEBPACK_IMPORTED_MODULE_45__["StudentContentComponent"],
-                _Custom_Modal_user_dialog_user_dialog_component__WEBPACK_IMPORTED_MODULE_46__["UserDialogComponent"],
+                _main_page_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_14__["MainHeaderComponent"],
+                _main_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_15__["OnlineCoursesComponent"],
+                _main_page_about_speed_painting_about_speed_painting_component__WEBPACK_IMPORTED_MODULE_16__["AboutSpeedPaintingComponent"],
+                _main_page_why_speed_painting_why_speed_painting_component__WEBPACK_IMPORTED_MODULE_17__["WhySpeedPaintingComponent"],
+                _main_page_welcome_school_welcome_school_component__WEBPACK_IMPORTED_MODULE_18__["WelcomeSchoolComponent"],
+                _main_page_what_people_say_comments_component__WEBPACK_IMPORTED_MODULE_19__["CommentsComponent"],
+                _main_page_partners_partners_component__WEBPACK_IMPORTED_MODULE_20__["PartnersComponent"],
+                _main_page_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_21__["MainFooterComponent"],
+                _main_page_log_in_log_in_component__WEBPACK_IMPORTED_MODULE_22__["LogInComponent"],
+                _not_found_component__WEBPACK_IMPORTED_MODULE_24__["NotFoundComponent"],
+                _profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_23__["MyProfileComponent"],
+                _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_25__["MainPageTemplateComponent"],
+                _profile_page_header_header_component__WEBPACK_IMPORTED_MODULE_26__["HeaderComponent"],
+                _profile_page_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_27__["DashboardComponent"],
+                _profile_page_user_information_user_information_component__WEBPACK_IMPORTED_MODULE_28__["UserInformationComponent"],
+                _profile_page_main_content_main_content_component__WEBPACK_IMPORTED_MODULE_29__["MainContentComponent"],
+                _profile_page_information_section_information_section_component__WEBPACK_IMPORTED_MODULE_30__["InformationSectionComponent"],
+                _profile_page_courses_section_courses_section_component__WEBPACK_IMPORTED_MODULE_31__["CoursesComponent"],
+                _profile_page_project_section_project_section_component__WEBPACK_IMPORTED_MODULE_32__["ProjectSectionComponent"],
+                _courses_page_courses_page_component__WEBPACK_IMPORTED_MODULE_33__["CoursesPageComponent"],
+                _partners_page_partners_page_component__WEBPACK_IMPORTED_MODULE_34__["PartnersPageComponent"],
+                _partners_page_partner_content_partner_content_component__WEBPACK_IMPORTED_MODULE_35__["PartnersContentComponent"],
+                _courses_page_teachers_teachers_component__WEBPACK_IMPORTED_MODULE_36__["TeachersComponent"],
+                _courses_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_37__["CoursesTemplateComponent"],
+                _course_page_course_page_component__WEBPACK_IMPORTED_MODULE_38__["CoursePageComponent"],
+                _course_page_about_course_about_course_component__WEBPACK_IMPORTED_MODULE_39__["AboutCourseComponent"],
+                _course_page_course_slider_course_slider_component__WEBPACK_IMPORTED_MODULE_40__["CourseSliderComponent"],
+                _projects_page_project_page_component__WEBPACK_IMPORTED_MODULE_43__["ProjectPageComponent"],
+                _projects_page_project_content_project_content_component__WEBPACK_IMPORTED_MODULE_44__["ProjectContentComponent"],
+                _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_45__["StudentsPageComponent"],
+                _students_page_student_component_student_content_component__WEBPACK_IMPORTED_MODULE_46__["StudentContentComponent"],
+                _Custom_Modal_user_dialog_user_dialog_component__WEBPACK_IMPORTED_MODULE_47__["UserDialogComponent"],
                 _directives_modal_component__WEBPACK_IMPORTED_MODULE_8__["ModalComponent"],
                 _directives_click_outside_directive__WEBPACK_IMPORTED_MODULE_9__["ClickOutsideDirective"],
-                _Custom_Modal_pricing_plan_pricing_plan_component__WEBPACK_IMPORTED_MODULE_47__["PricingPlanComponent"],
-                _Custom_Modal_partner_modal_partner_modal_component__WEBPACK_IMPORTED_MODULE_48__["PartnerModalComponent"]
+                _Custom_Modal_pricing_plan_pricing_plan_component__WEBPACK_IMPORTED_MODULE_48__["PricingPlanComponent"],
+                _Custom_Modal_partner_modal_partner_modal_component__WEBPACK_IMPORTED_MODULE_49__["PartnerModalComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_13__["AppRoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
                 _ngx_share_buttons__WEBPACK_IMPORTED_MODULE_4__["ShareButtonsModule"],
                 ngx_owl_carousel__WEBPACK_IMPORTED_MODULE_6__["OwlModule"],
-                _angular_service_worker__WEBPACK_IMPORTED_MODULE_40__["ServiceWorkerModule"].register('ngsw-worker.js', { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_41__["environment"].production })
+                _angular_service_worker__WEBPACK_IMPORTED_MODULE_41__["ServiceWorkerModule"].register('ngsw-worker.js', { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_42__["environment"].production })
             ],
             providers: [
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_12__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_12__["HashLocationStrategy"] },
                 _services_modal_service__WEBPACK_IMPORTED_MODULE_10__["ModalService"]
             ],
             bootstrap: [
@@ -822,7 +825,7 @@ var AppRoutingModule = /** @class */ (function () {
     }
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes)],
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes, { useHash: true })],
             exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
         })
     ], AppRoutingModule);
@@ -2207,11 +2210,6 @@ __webpack_require__.r(__webpack_exports__);
 var NotFoundComponent = /** @class */ (function () {
     function NotFoundComponent() {
     }
-    NotFoundComponent.prototype.ngOnInit = function () {
-        var path = window.location.pathname.slice(1);
-        localStorage.setItem('path', path);
-        window.location.href = '../';
-    };
     NotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'not-found-app',
