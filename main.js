@@ -566,11 +566,6 @@ __webpack_require__.r(__webpack_exports__);
 var AppComponent = /** @class */ (function () {
     function AppComponent(router) {
         this.router = router;
-        // let path = localStorage.getItem('path');
-        // if(path) {
-        //   localStorage.removeItem('path');
-        //   this.router.navigate([path]);
-        // }
     }
     AppComponent.prototype.ngOnInit = function () {
         this.router.events.subscribe(function (evt) {
@@ -617,9 +612,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _directives_modal_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_directives/modal.component */ "./src/app/_directives/modal.component.ts");
 /* harmony import */ var _directives_click_outside_directive__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./_directives/click-outside.directive */ "./src/app/_directives/click-outside.directive.ts");
 /* harmony import */ var _services_modal_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./_services/modal.service */ "./src/app/_services/modal.service.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.routing.module */ "./src/app/app.routing.module.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.routing.module */ "./src/app/app.routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _main_page_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./main-page/main-header/main-header.component */ "./src/app/main-page/main-header/main-header.component.ts");
 /* harmony import */ var _main_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./main-page/online-courses/online-courses.component */ "./src/app/main-page/online-courses/online-courses.component.ts");
 /* harmony import */ var _main_page_about_speed_painting_about_speed_painting_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./main-page/about-speed-painting/about-speed-painting.component */ "./src/app/main-page/about-speed-painting/about-speed-painting.component.ts");
@@ -713,7 +708,7 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _Filter_filter_pipe__WEBPACK_IMPORTED_MODULE_7__["FilterDataPipe"],
-                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"],
                 _main_page_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_14__["MainHeaderComponent"],
                 _main_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_15__["OnlineCoursesComponent"],
                 _main_page_about_speed_painting_about_speed_painting_component__WEBPACK_IMPORTED_MODULE_16__["AboutSpeedPaintingComponent"],
@@ -753,7 +748,7 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_13__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
@@ -762,11 +757,11 @@ var AppModule = /** @class */ (function () {
                 _angular_service_worker__WEBPACK_IMPORTED_MODULE_41__["ServiceWorkerModule"].register('ngsw-worker.js', { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_42__["environment"].production })
             ],
             providers: [
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_12__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_12__["HashLocationStrategy"] },
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_11__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_11__["HashLocationStrategy"] },
                 _services_modal_service__WEBPACK_IMPORTED_MODULE_10__["ModalService"]
             ],
             bootstrap: [
-                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"]
             ]
         })
     ], AppModule);
@@ -1573,6 +1568,8 @@ var LogInComponent = /** @class */ (function () {
     LogInComponent.prototype.changeLocation = function () {
         localStorage.setItem('isActivated', 'true');
         this.router.navigateByUrl('/myProfile');
+        var elem = document.body;
+        this.setStyleAttribute(elem, { 'overflow': 'auto' });
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
