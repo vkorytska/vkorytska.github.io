@@ -618,7 +618,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _directives_click_outside_directive__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./_directives/click-outside.directive */ "./src/app/_directives/click-outside.directive.ts");
 /* harmony import */ var _services_modal_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./_services/modal.service */ "./src/app/_services/modal.service.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.routing.module */ "./src/app/app.routing.module.ts");
 /* harmony import */ var _main_page_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./main-page/main-header/main-header.component */ "./src/app/main-page/main-header/main-header.component.ts");
 /* harmony import */ var _main_page_online_courses_online_courses_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./main-page/online-courses/online-courses.component */ "./src/app/main-page/online-courses/online-courses.component.ts");
 /* harmony import */ var _main_page_about_speed_painting_about_speed_painting_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./main-page/about-speed-painting/about-speed-painting.component */ "./src/app/main-page/about-speed-painting/about-speed-painting.component.ts");
@@ -751,7 +751,7 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing__WEBPACK_IMPORTED_MODULE_12__["routing"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
@@ -774,25 +774,29 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/app.routing.ts":
-/*!********************************!*\
-  !*** ./src/app/app.routing.ts ***!
-  \********************************/
-/*! exports provided: routing */
+/***/ "./src/app/app.routing.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/app.routing.module.ts ***!
+  \***************************************/
+/*! exports provided: AppRoutingModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routing", function() { return routing; });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main-page/main-page-template/main-page-template.component */ "./src/app/main-page/main-page-template/main-page-template.component.ts");
-/* harmony import */ var _profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./profile-page/profile-page.component */ "./src/app/profile-page/profile-page.component.ts");
-/* harmony import */ var _courses_page_courses_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./courses-page/courses-page.component */ "./src/app/courses-page/courses-page.component.ts");
-/* harmony import */ var _course_page_course_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./course-page/course-page.component */ "./src/app/course-page/course-page.component.ts");
-/* harmony import */ var _partners_page_partners_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./partners-page/partners-page.component */ "./src/app/partners-page/partners-page.component.ts");
-/* harmony import */ var _projects_page_project_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./projects-page/project-page.component */ "./src/app/projects-page/project-page.component.ts");
-/* harmony import */ var _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./students-page/students-page.component */ "./src/app/students-page/students-page.component.ts");
-/* harmony import */ var _not_found_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./not-found.component */ "./src/app/not-found.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main-page/main-page-template/main-page-template.component */ "./src/app/main-page/main-page-template/main-page-template.component.ts");
+/* harmony import */ var _profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./profile-page/profile-page.component */ "./src/app/profile-page/profile-page.component.ts");
+/* harmony import */ var _courses_page_courses_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./courses-page/courses-page.component */ "./src/app/courses-page/courses-page.component.ts");
+/* harmony import */ var _course_page_course_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./course-page/course-page.component */ "./src/app/course-page/course-page.component.ts");
+/* harmony import */ var _partners_page_partners_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./partners-page/partners-page.component */ "./src/app/partners-page/partners-page.component.ts");
+/* harmony import */ var _projects_page_project_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./projects-page/project-page.component */ "./src/app/projects-page/project-page.component.ts");
+/* harmony import */ var _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./students-page/students-page.component */ "./src/app/students-page/students-page.component.ts");
+/* harmony import */ var _not_found_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./not-found.component */ "./src/app/not-found.component.ts");
+
+
 
 
 
@@ -804,16 +808,27 @@ __webpack_require__.r(__webpack_exports__);
 
 var appRoutes = [
     { path: '', redirectTo: 'main', pathMatch: 'full' },
-    { path: 'main', component: _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_1__["MainPageTemplateComponent"] },
-    { path: 'myProfile', component: _profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_2__["MyProfileComponent"] },
-    { path: 'courses', component: _courses_page_courses_page_component__WEBPACK_IMPORTED_MODULE_3__["CoursesPageComponent"] },
-    { path: 'course', component: _course_page_course_page_component__WEBPACK_IMPORTED_MODULE_4__["CoursePageComponent"] },
-    { path: 'partners', component: _partners_page_partners_page_component__WEBPACK_IMPORTED_MODULE_5__["PartnersPageComponent"] },
-    { path: 'projects', component: _projects_page_project_page_component__WEBPACK_IMPORTED_MODULE_6__["ProjectPageComponent"] },
-    { path: 'students', component: _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_7__["StudentsPageComponent"] },
-    { path: '**', component: _not_found_component__WEBPACK_IMPORTED_MODULE_8__["NotFoundComponent"] }
+    { path: 'main', component: _main_page_main_page_template_main_page_template_component__WEBPACK_IMPORTED_MODULE_3__["MainPageTemplateComponent"] },
+    { path: 'myProfile', component: _profile_page_profile_page_component__WEBPACK_IMPORTED_MODULE_4__["MyProfileComponent"] },
+    { path: 'courses', component: _courses_page_courses_page_component__WEBPACK_IMPORTED_MODULE_5__["CoursesPageComponent"] },
+    { path: 'course', component: _course_page_course_page_component__WEBPACK_IMPORTED_MODULE_6__["CoursePageComponent"] },
+    { path: 'partners', component: _partners_page_partners_page_component__WEBPACK_IMPORTED_MODULE_7__["PartnersPageComponent"] },
+    { path: 'projects', component: _projects_page_project_page_component__WEBPACK_IMPORTED_MODULE_8__["ProjectPageComponent"] },
+    { path: 'students', component: _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_9__["StudentsPageComponent"] },
+    { path: '**', component: _not_found_component__WEBPACK_IMPORTED_MODULE_10__["NotFoundComponent"] }
 ];
-var routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes);
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
+}());
+
 
 
 /***/ }),
