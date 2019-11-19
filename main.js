@@ -810,7 +810,7 @@ var appRoutes = [
     { path: 'students', component: _students_page_students_page_component__WEBPACK_IMPORTED_MODULE_7__["StudentsPageComponent"] },
     { path: '**', component: _not_found_component__WEBPACK_IMPORTED_MODULE_8__["NotFoundComponent"] }
 ];
-var routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes);
+var routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes, { useHash: true });
 
 
 /***/ }),
