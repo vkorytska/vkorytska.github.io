@@ -1567,9 +1567,9 @@ var LogInComponent = /** @class */ (function () {
     };
     LogInComponent.prototype.changeLocation = function () {
         localStorage.setItem('isActivated', 'true');
-        this.router.navigateByUrl('/myProfile');
         var elem = document.body;
         this.setStyleAttribute(elem, { 'overflow': 'auto' });
+        this.router.navigateByUrl('/myProfile');
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
