@@ -271,12 +271,10 @@ var UserDialogComponent = /** @class */ (function () {
     };
     UserDialogComponent.prototype.openProfilePage = function () {
         this.router.navigate(['/myProfile']);
-        //window.location.href = "/myProfile";
     };
     UserDialogComponent.prototype.logOut = function () {
         localStorage.setItem('isActivated', 'false');
         this.router.navigate(['/main']);
-        //window.location.pathname="/main";
     };
     UserDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2194,10 +2192,15 @@ __webpack_require__.r(__webpack_exports__);
 var NotFoundComponent = /** @class */ (function () {
     function NotFoundComponent() {
     }
+    NotFoundComponent.prototype.ngOnInit = function () {
+        var path = window.location.pathname.slice(1);
+        localStorage.setItem('path', path);
+        window.location.href = '../';
+    };
     NotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'not-found-app',
-            template: "\n        <script>\n            const path = window.location.pathname.slice(1);\n            localStorage.setItem('path', path);\n            window.location.href='../';\n        </script>"
+            template: "<h3>\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u0430</h3>"
         })
     ], NotFoundComponent);
     return NotFoundComponent;
@@ -2551,7 +2554,6 @@ var HeaderComponent = /** @class */ (function () {
         localStorage.setItem('isActivated', 'false');
         this.isActivated = false;
         this.router.navigate(['/main']);
-        //window.location.href='/main';
     };
     HeaderComponent.prototype.setStyleAttribute = function (element, attrs) {
         if (attrs !== undefined) {
