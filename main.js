@@ -251,11 +251,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_services */ "./src/app/_services/index.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
 var UserDialogComponent = /** @class */ (function () {
-    function UserDialogComponent(modalService) {
+    function UserDialogComponent(router, modalService) {
+        this.router = router;
         this.modalService = modalService;
     }
     UserDialogComponent.prototype.openModal = function (id) {
@@ -267,11 +270,13 @@ var UserDialogComponent = /** @class */ (function () {
         this.modalService.close(id);
     };
     UserDialogComponent.prototype.openProfilePage = function () {
-        window.location.href = "/myProfile";
+        this.router.navigate(['/myProfile']);
+        //window.location.href = "/myProfile";
     };
     UserDialogComponent.prototype.logOut = function () {
         localStorage.setItem('isActivated', 'false');
-        window.location.replace("https://vkorytska.github.io/main");
+        this.router.navigate(['/main']);
+        //window.location.pathname="/main";
     };
     UserDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -279,7 +284,8 @@ var UserDialogComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./user-dialog.component.html */ "./src/app/Custom-Modal/user-dialog/user-dialog.component.html"),
             styles: [__webpack_require__(/*! ./user-dialog.component.scss */ "./src/app/Custom-Modal/user-dialog/user-dialog.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services__WEBPACK_IMPORTED_MODULE_2__["ModalService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _services__WEBPACK_IMPORTED_MODULE_2__["ModalService"]])
     ], UserDialogComponent);
     return UserDialogComponent;
 }());
@@ -1512,12 +1518,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
 var LogInComponent = /** @class */ (function () {
-    function LogInComponent(formBuilder) {
+    function LogInComponent(formBuilder, router) {
         this.formBuilder = formBuilder;
+        this.router = router;
         this.onChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.form = this.formBuilder.group({
             email: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]],
@@ -1542,7 +1551,8 @@ var LogInComponent = /** @class */ (function () {
     };
     LogInComponent.prototype.changeLocation = function () {
         localStorage.setItem('isActivated', 'true');
-        window.location.replace('https://vkorytska.github.io/myProfile');
+        this.router.navigate(['/myProfile']);
+        //window.location.pathname="/myProfile";
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
@@ -1558,7 +1568,8 @@ var LogInComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./log-in.component.html */ "./src/app/main-page/log-in/log-in.component.html"),
             styles: [__webpack_require__(/*! ./log-in.component.scss */ "./src/app/main-page/log-in/log-in.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], LogInComponent);
     return LogInComponent;
 }());
@@ -2508,11 +2519,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_Custom_Modal_user_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/Custom-Modal/user-dialog */ "./src/app/Custom-Modal/user-dialog/index.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
+    function HeaderComponent(router) {
+        this.router = router;
         this.onChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.openMenu = false;
         this.isActivated = JSON.parse(localStorage.getItem('isActivated'));
@@ -2532,7 +2546,8 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent.prototype.LogOut = function () {
         localStorage.setItem('isActivated', 'false');
         this.isActivated = false;
-        window.location.href = '/main';
+        this.router.navigate(['/main']);
+        //window.location.href='/main';
     };
     HeaderComponent.prototype.setStyleAttribute = function (element, attrs) {
         if (attrs !== undefined) {
@@ -2563,7 +2578,8 @@ var HeaderComponent = /** @class */ (function () {
             selector: 'header',
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/profile-page/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.scss */ "./src/app/profile-page/header/header.component.scss")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
