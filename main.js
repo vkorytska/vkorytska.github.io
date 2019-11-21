@@ -2563,7 +2563,7 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent.prototype.LogOut = function () {
         localStorage.setItem('isActivated', 'false');
         this.isActivated = false;
-        window.location.href = '/main';
+        window.location.href = '/#/main';
     };
     HeaderComponent.prototype.setStyleAttribute = function (element, attrs) {
         if (attrs !== undefined) {
