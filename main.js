@@ -274,7 +274,7 @@ var UserDialogComponent = /** @class */ (function () {
     };
     UserDialogComponent.prototype.logOut = function () {
         localStorage.setItem('isActivated', 'false');
-        window.location.href = '/main';
+        window.location.href = '/#/main';
         window.location.reload(true);
     };
     UserDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -2564,7 +2564,7 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent.prototype.LogOut = function () {
         localStorage.setItem('isActivated', 'false');
         this.isActivated = false;
-        window.location.href = '/main';
+        window.location.href = '/#/main';
         window.location.reload(true);
     };
     HeaderComponent.prototype.setStyleAttribute = function (element, attrs) {
