@@ -274,7 +274,7 @@ var UserDialogComponent = /** @class */ (function () {
     };
     UserDialogComponent.prototype.logOut = function () {
         localStorage.setItem('isActivated', 'false');
-        this.router.navigate(['/main']);
+        window.location.href = '/#/main';
     };
     UserDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
